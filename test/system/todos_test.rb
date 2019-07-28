@@ -16,7 +16,6 @@ class TodosTest < ApplicationSystemTestCase
 
     fill_in "Contents", with: @todo.contents
     check "Done" if @todo.done
-    fill_in "Seq", with: @todo.seq
     click_on "Create Todo"
 
     assert_text "Todo was successfully created"
@@ -29,7 +28,6 @@ class TodosTest < ApplicationSystemTestCase
 
     fill_in "Contents", with: @todo.contents
     check "Done" if @todo.done
-    fill_in "Seq", with: @todo.seq
     click_on "Update Todo"
 
     assert_text "Todo was successfully updated"
