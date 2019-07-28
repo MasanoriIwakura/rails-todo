@@ -1,5 +1,8 @@
 {
   "name": "rails-todo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "bulma": "^0.7.5"
+  }
 }
