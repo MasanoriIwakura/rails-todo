@@ -1,24 +1,37 @@
-# README
+# Ruby on Rails の勉強用に全力で TODO アプリを作成する
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 開発環境
 
-Things you may want to cover:
+| Tool               | Version        |
+| :----------------- | :------------- |
+| macOS              | Mojave 10.14.5 |
+| rbenv              | 1.1.2          |
+| Ruby               | 2.6.3          |
+| Rails              | 5.2.3          |
+| Visual Studio Code | 1.36.1         |
+| npm                | 6.10.1         |
+| bulma              | 0.7.5          |
 
-* Ruby version
+## 構築コマンド
 
-* System dependencies
+```bash
+# railsアプリの作成
+# coffee scriptいらない
+$ rails new rails-todo --skip-coffee
 
-* Configuration
+# レイアウト用にbulmaを追加
+$ npm i --save-dev bulma
 
-* Database creation
+# Scaffoldのテンプレートをカスタマイズしたいため、コピー
+# lib/templates/scaffoldの各テンプレートを修正
+$ rails app:templates:copy
 
-* Database initialization
+# TODOページ作成
+$ rails g scaffold todo contents:string done:boolean
 
-* How to run the test suite
+# マイグレーション
+$ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 実行
+$ rails s
+```
