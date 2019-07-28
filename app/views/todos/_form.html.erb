@@ -12,21 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :seq %>
-    <%= form.number_field :seq %>
+    <%= form.label :seq, :class => "label" %>
+    <div class="control">
+      <%= form.number_field :seq %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :contents %>
-    <%= form.text_field :contents %>
+    <%= form.label :contents, :class => "label" %>
+    <div class="control">
+      <%= form.text_field :contents %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :done %>
-    <%= form.check_box :done %>
+    <%= form.label :done, :class => "label" %>
+    <div class="control">
+      <%= form.check_box :done %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "button is-primary" %>
   </div>
 <% end %>

@@ -1,0 +1,2 @@
+<h1 class="title"><%= class_name %>#<%= @action %></h1>
+<p class="subtitle">Find me in <%= @path %></p>
