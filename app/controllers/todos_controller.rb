@@ -21,10 +21,10 @@ class TodosController < ApplicationController
 
   # POST /todos
   def create
-    @todo = Todo.new(todo_params)
+    @todo = Todo.new(contents: params[:contents], done: false)
 
     if @todo.save
-      redirect_to @todo, notice: 'Todo was successfully created.'
+      redirect_to  todos_url, notice: 'Todo was successfully added.'
     else
       render :new
     end

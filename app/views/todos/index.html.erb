@@ -15,15 +15,11 @@
     <% @todos.each do |todo| %>
       <tr>
         <td><%= todo.contents %></td>
-        <td><%= todo.done %></td>
-        <td><%= link_to 'Show', todo, :class => "button is-info" %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo), :class => "button is-warning" %></td>
+        <td><%= check_box_tag 'done', '', todo.done %></td>
         <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button is-danger" %></td>
       </tr>
     <% end %>
+
+    <%= render 'form', todo: @todo %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Todo', new_todo_path, :class => "button is-primary" %>
